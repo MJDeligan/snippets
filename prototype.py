@@ -1,7 +1,4 @@
 class Base():
-    def __init__(self, value):
-        self.value = value
-    
     def __eq__(self, other):
         return not (self != other)
 
@@ -22,7 +19,7 @@ class Base():
 
 class Derived(Base):
     def __init__(self, value):
-        super().__init__(value)
+        self.value = value
 
     def __eq__(self, other):
         return self.value == other.value
