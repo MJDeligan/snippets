@@ -14,6 +14,14 @@ def curry(f, args=[]):
 def add(a, b):
     return a + b
 
+# example usage: add(5)(3) = 8
+# this is especially useful when we want to create partial functions
+# we might per example want a function that adds 3 to a number and one that adds 10 to a number
+# instead of defining both of these, we can just define 'add' as a curried function and then use
+# add3 = add(3)
+# add10 = add(10)
+# now add10 and add3 are both function that can be called or passed as arguments
+
 
 # takes a function
 # returns a function which takes a list as a parameter and returns a
